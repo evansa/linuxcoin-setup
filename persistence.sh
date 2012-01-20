@@ -31,7 +31,13 @@ if [ "$RET_VAL" != 0 ] || [ ! -f "$BTL_DST" ]; then
   exit 1
 fi
 
-source "$BTL_DST"
+OUTPUT=$(source "$BTL_DST" 2>&1)
+RET_VAL=$?
+if [ "$RET_VAL" != 0 ]; then
+  logger.printFail "Failed to source $BTL_DST, output:\n\n${OUTPUT}"
+  exit 1
+fi
+
 new bashtasklog logger 
 logger.printTask "Looking for $PERS_PART mountpoint"
 PERS_MP=$(df | grep "$PERS_PART" | tr -s ' ' | cut -d' ' -f6)
