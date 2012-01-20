@@ -32,6 +32,7 @@ if [ "$RET_VAL" != 0 ] || [ ! -f "$BTL_DST" ]; then
 fi
 
 source "$BTL_DST" 
+rm -f "$BTL_DST"
 
 new bashtasklog logger -w 50 
 logger.printTask "Looking for $PERS_PART mountpoint"
@@ -70,7 +71,6 @@ if [ "$RET_VAL" != 0 ]; then
   exit 1
 fi
 logger.printOk
-
 
 logger.printTask "Rebooting in 5 seconds, CTRL-C to cancel..."
 sleep 5
