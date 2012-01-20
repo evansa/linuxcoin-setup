@@ -47,9 +47,6 @@ if [ "$RET_VAL" != 0 ]; then
 fi
 logger.printOk
 
-logger.printTask "Make sure to edit $RCLOCAL_DST with the necessary static IP address and network settings"
-logger.printWarn
-
 logger.printTask "Making user a password-less sudoer"
 echo "user ALL = NOPASSWD : ALL" >> /etc/sudoers
 logger.printOk
@@ -62,3 +59,6 @@ logger.printTask "Enabling SSH daemon on boot"
 logger.printOk
 update-rc.d ssh enable
 
+echo "NOTE: Make sure to edit /etc/rc.local with your static IP address and network settings."
+echo "When that's done, run the following command:\n"
+echo "/etc/rc.local && /etc/init.d/networking restart"
