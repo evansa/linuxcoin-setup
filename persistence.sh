@@ -2,7 +2,6 @@
 
 <<HEAD
 
-Name:           bashtasklog.sh
 Company:        Zulius
 Author:         Timbo White
 Website:        http://www.zulius.com
@@ -34,7 +33,7 @@ fi
 source "$BTL_DST" 
 rm -f "$BTL_DST"
 
-new bashtasklog logger -w 50 
+new bashtasklog logger -w 60 
 logger.printTask "Looking for $PERS_PART mountpoint"
 PERS_MP=$(df | grep "$PERS_PART" | tr -s ' ' | cut -d' ' -f6)
 
