@@ -33,7 +33,7 @@ fi
 
 source "$BTL_DST" 
 
-new bashtasklog logger 
+new bashtasklog logger -w 50 
 logger.printTask "Looking for $PERS_PART mountpoint"
 PERS_MP=$(df | grep "$PERS_PART" | tr -s ' ' | cut -d' ' -f6)
 
