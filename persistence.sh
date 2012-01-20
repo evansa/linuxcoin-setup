@@ -44,7 +44,7 @@ fi
 logger.printOk
 
 logger.printTask "Mountpoint is $PERS_MP, unmounting"
-OUTPUT=$(umount "$PERS_MP")
+OUTPUT=$(umount "$PERS_MP" 2>&1)
 RET_VAL=$?
 if [ "$RET_VAL" != 0 ]; then
   logger.printFail "Failed to unmount $PERS_PART, output:\n\n${OUTPUT}"
@@ -53,7 +53,7 @@ fi
 logger.printOk
 
 logger.printTask "Creating ext4 file system at $PERS_PART" 
-OUTPUT=$(mkfs.ext4 "$PERS_PART" -L live-rw)
+OUTPUT=$(mkfs.ext4 "$PERS_PART" -L live-rw 2>&1)
 RET_VAL=$?
 if [ "$RET_VAL" != 0 ]; then
   logger.printFail "Failed to unmount $PERS_PART, output:\n\n${OUTPUT}"
@@ -62,7 +62,7 @@ fi
 logger.printOk
 
 logger.printTask "Downloading syslinux.cfg to $SYSLINUX_DST"
-OUTPUT=$(wget "$SYSLINUX_SRC" -O "$SYSLINUX_DST")
+OUTPUT=$(wget "$SYSLINUX_SRC" -O "$SYSLINUX_DST" 2>&1)
 RET_VAL=$?
 if [ "$RET_VAL" != 0 ]; then
   logger.printFail "Failed, output:\n\n${OUTPUT}"
@@ -74,3 +74,6 @@ logger.printOk
 logger.printTask "Rebooting in 5 seconds, CTRL-C to cancel..."
 sleep 5
 shutdown -r now
+logger.printOk
+logger.printTask "Rebooting..."
+logger.printOk
