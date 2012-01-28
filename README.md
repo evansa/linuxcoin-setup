@@ -10,19 +10,23 @@ one-liners
 ==========
 A few bash one-liners to run on your Linuxcoin rig when you're setting it up.
 
-### Setup persistence ### 
+### Setup persistence
 What it does:
+
 - setup ext4 file system persistence
 - setup Linuxcoin to boot with perisistence by default (will overwrite syslinux.cfg) 
+
     curl https://raw.github.com/timbowhite/linuxcoin-setup/master/setup/persistence.sh | bash 
 
-### Make rig headless ###
+### Make rig headless
 What it does: 
+
 - apt-get update
 - assigns a static IP (default is 192.168.0.150)
 - makes the "user" user a password-less sudoer
 - starts SSH
 - enables SSH on boot
+    
     curl https://raw.github.com/timbowhite/linuxcoin-setup/master/setup/headless.sh | bash
 
 Contributing
