@@ -26,9 +26,9 @@ DISPLAY=:0.0 aticonfig --pplib-cmd "set fanspeed 0 $FANSPEED_PERCENTAGE"
 # If the first card has only 1 GPU, increment the DISPLAY variable by 1 
 # to set the fan on the 2nd card:
 
-# DISPLAY=:0.2 aticonfig --pplib-cmd "set fanspeed 0 {$FANSPEED_PERCENTAGE}"
+# DISPLAY=:0.2 aticonfig --pplib-cmd "set fanspeed 0 $FANSPEED_PERCENTAGE"
 
 # If the first card has 2 GPU's, increment the DISPLAY variable by 2
 # to set the fan on the 2nd card:
 
-# DISPLAY=:0.2 aticonfig --pplib-cmd "set fanspeed 0 {$FANSPEED_PERCENTAGE}"
+# DISPLAY=:0.2 aticonfig --pplib-cmd "set fanspeed 0 $FANSPEED_PERCENTAGE"
