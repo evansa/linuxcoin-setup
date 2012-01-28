@@ -8,26 +8,30 @@ These files go hand-in-hand with the [Setup a Bitcoin mining rig powered by Linu
 
 one-liners
 ==========
-A few bash one-liners to run on your Linuxcoin rig when you're setting it up.
+A few bash one-liners to run on your Linuxcoin rig to help automate setup.
 
 ### Setup persistence
-What it does:
-
-- setup ext4 file system persistence
-- setup Linuxcoin to boot with perisistence by default (will overwrite syslinux.cfg) 
 
     curl https://raw.github.com/timbowhite/linuxcoin-setup/master/setup/persistence.sh | bash 
 
+What it does:
+
+- setup ext4 file system persistence
+- setup Linuxcoin to boot with perisistence by default (will overwrite syslinux.cfg)
+
+
 ### Make rig headless
-What it does: 
+    
+    curl https://raw.github.com/timbowhite/linuxcoin-setup/master/setup/headless.sh | bash
+
+What it does:
 
 - apt-get update
 - assigns a static IP (default is 192.168.0.150)
 - makes the "user" user a password-less sudoer
 - starts SSH
 - enables SSH on boot
-    
-    curl https://raw.github.com/timbowhite/linuxcoin-setup/master/setup/headless.sh | bash
+
 
 Contributing
 ============
