@@ -8,7 +8,7 @@ Author:         Timbo White
 Website:        http://www.zulius.com
 Description:    Smartcoin script that gets executed after a GPU lockup event.
                 Here's what it does: 
-                - sends a notification email with current system stats 
+                - sends a notification email with GPU stats 
                 - reboots the mining rig
 Copyright:      2011 Zulius
 License:        GPL v2 (http://www.gnu.org/licenses/gpl-2.0.html)
@@ -42,14 +42,10 @@ $GPU_TEMP
 ..:: GPU clocks ::..
 $GPU_CLOCKS
 
-..:: top ::..
-$TOP
-
-
 EOF
 )
 
-cat "$EMAIL"|sendmail -t;
+echo "$EMAIL"|sendmail -t;
 
 # wait a few seconds to flush email queue
 # and shutdown
