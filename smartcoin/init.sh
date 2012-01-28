@@ -20,7 +20,7 @@ FANSPEED_PERCENTAGE="80"
 ### /config section ###
 
 # set the fan speed percentage for the 1st graphics card
-DISPLAY=:0.0 aticonfig --pplib-cmd "set fanspeed 0 {$FANSPEED_PERCENTAGE}"
+DISPLAY=:0.0 aticonfig --pplib-cmd "set fanspeed 0 $FANSPEED_PERCENTAGE"
 
 # Add other fan controls for separate cards.
 # If the first card has only 1 GPU, increment the DISPLAY variable by 1 

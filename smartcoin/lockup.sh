@@ -30,26 +30,26 @@ DATE=$(date)
 
 # compose email
 EMAIL=$(cat <<EOF
-From: {$FROM_EMAIL}
-To: {$TO_EMAIL}
-Subject: {$SUBJECT}
+From: $FROM_EMAIL
+To: $TO_EMAIL
+Subject: $SUBJECT
 
-GPU lockup at {$DATE}
+GPU lockup at $DATE
 
 ..:: GPU temperatures ::..
-{$GPU_TEMP}
+$GPU_TEMP
 
 ..:: GPU clocks ::..
-{$GPU_CLOCKS}
+$GPU_CLOCKS
 
 ..:: top ::..
-{$TOP}
+$TOP
 
 
 EOF
 )
 
-cat {$EMAIL}|sendmail -t;
+cat "$EMAIL"|sendmail -t;
 
 # wait a few seconds to flush email queue
 # and shutdown
