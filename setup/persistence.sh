@@ -16,7 +16,7 @@ BTL_SRC="https://raw.github.com/timbowhite/bashtasklog/master/bashtasklog.sh"
 BTL_DST="/tmp/bashtasklog.sh"
 
 # pre-madesyslinux.cfg
-SYSLINUX_SRC="https://raw.github.com/timbowhite/linuxcoin-setup/master/syslinux.cfg"
+SYSLINUX_SRC="https://raw.github.com/timbowhite/linuxcoin-setup/master/system_files/syslinux.cfg"
 SYSLINUX_DST="/live/image/syslinux.cfg"
 
 # persistence partition

@@ -1,2 +1,0 @@
-curl https://raw.github.com/timbowhite/linuxcoin-setup/master/persistence.sh | bash 
-curl https://raw.github.com/timbowhite/linuxcoin-setup/master/headless.sh | bash

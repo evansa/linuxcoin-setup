@@ -6,6 +6,12 @@ Company:        Zulius
 Author:         Timbo White
 Website:        http://www.zulius.com
 Description:    Bash script for setting up Linuxcoin persistence on a USB device. 
+                What it does:
+                - apt-get update
+                - assigns a static IP (default is 192.168.0.150)
+                - makes "user" a password-less sudoer
+                - starts SSH
+                - enables SSH on boot 
 Copyright:      2012 Zulius
 License:        GPL v2 (http://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -16,7 +22,7 @@ BTL_SRC="https://raw.github.com/timbowhite/bashtasklog/master/bashtasklog.sh"
 BTL_DST="/tmp/bashtasklog.sh"
 
 # pre-madesyslinux.cfg
-RCLOCAL_SRC="https://raw.github.com/timbowhite/linuxcoin-setup/master/rc.local"
+RCLOCAL_SRC="https://raw.github.com/timbowhite/linuxcoin-setup/master/system_files/rc.local"
 RCLOCAL_DST="/etc/rc.local"
 
 # persistence partition
